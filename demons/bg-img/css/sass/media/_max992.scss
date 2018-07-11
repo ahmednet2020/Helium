@@ -1,0 +1,71 @@
+//media maxsize 992px
+@include media(maxlg)
+{
+	body
+	{
+		&.show
+		{
+			overflow: hidden;
+			.navbar-collapse
+			{
+				#{$left}:0;
+			}
+		}
+	}
+	//style navbar item link in mobile view
+	.navbar-collapse
+	{
+	    will-change: position, $left;
+		position: fixed;
+	    top: 0;
+	    #{$left}: -100%;
+	    #{$right}: 0;
+	    bottom:0;
+	    width: 100%;
+	    z-index: 900;
+	    padding: 0 1rem;
+	    background: $white-color;
+	    overflow-y: auto;
+	    overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		@include transition($left 0.5s linear);
+		.nav-item
+		{
+			color:$text-color;
+			margin-bottom: 0.5rem;
+			&:hover,
+			&.active
+			{
+				background-color:$main-color;
+				color:$white-color;
+			}
+		}
+		.close-btn
+		{
+			display:block;
+		}
+	}
+	//hidden mobile screen in mobile view
+	.mobile-view
+	{
+		display:none;
+	}
+	//footer hover in mobile view stop hover effect
+	footer
+	{
+		.list-inline-item
+		{
+			&:hover
+			{
+				a
+				{
+					width:70px;
+				}
+			}
+		}
+		.social-text
+		{
+			display:none;
+		}
+	}
+}

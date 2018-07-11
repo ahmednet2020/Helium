@@ -1,0 +1,39 @@
+/*start gallery style */
+.item-gallery
+{
+	position: relative;
+	overflow: hidden;
+	img
+	{
+		height:300px;
+	}
+	&:hover,
+	&:focus
+	{
+		.img-hover
+		{
+			z-index: 5;
+			outline-offset: -1rem;
+			@include transition-delay(0.2s);
+		}
+	}
+}
+.img-hover
+{
+	top: 0;
+    position: absolute;
+    #{$left}: 0;
+    #{$right}: 0;
+    bottom: 0;
+    background-color: rgba($main-color,0.5);
+    outline: 1px solid #fff;
+	z-index: -1;
+	@include transition((outline-offset 0.3s ease-in));
+}
+.gallery-btn
+{
+	font-size: 2rem;
+	color:$white-color;
+	padding: 0.5rem;
+}
+/*end gallery style */

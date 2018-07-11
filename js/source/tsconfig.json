@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "removeComments": true,  
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitThis":false,
+	"outDir":"../"
+  },
+  "exclude": [
+		"./declare/*"
+	]
+}

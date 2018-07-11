@@ -1,0 +1,27 @@
+/*start faq style */
+.card-header
+{
+	background-color:$text-color;
+	color:$white-color;
+	.h-link
+	{
+		cursor: pointer;
+		&:after
+		{
+			content: "\f068";
+			display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    float: $right;
+		    clear:both;
+		}
+		&.collapsed:after
+		{
+			content: "\f067";
+		}
+	}
+}
+/*end faq style */

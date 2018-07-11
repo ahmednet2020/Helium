@@ -1,0 +1,24 @@
+/*start btn class style */
+.btn
+{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+// btn-primary class themes style 
+.btn-primary
+{
+	color: $white-color;
+    background-color: $main-color;
+    border-color: transparent;
+    &:focus,
+    &:active,
+    &:hover
+    {
+    	box-shadow:none;
+    	outline:none;
+    	color: $main-color ;
+    	background-color:$white-color;
+    	border-color: transparent;
+    }
+}
+/*end btn class style */

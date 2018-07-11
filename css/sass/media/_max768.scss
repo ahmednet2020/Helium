@@ -1,0 +1,20 @@
+//media maxsize 768px
+@include media(maxmd)
+{
+	.feature-list
+	{
+		.content 
+		{
+			margin:1rem 0;
+		}
+		.icon-span
+		{
+			display:none;
+		}
+		.info-feature
+		{
+			@include perfix(flex,0 0 100%);
+			text-align: center;
+		}
+	}
+}

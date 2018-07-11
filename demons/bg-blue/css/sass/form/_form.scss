@@ -1,0 +1,41 @@
+/* start form style */
+.form-group
+{
+	position: relative;
+}
+
+.form-control
+{
+	padding: 1rem 0.5rem;
+	&,
+    &:focus
+	{
+	    color:$text-color;
+	    background-color: $white-color;
+	    border-color: transparent;
+	    @include boxshadow(none);
+	    @include placeholder-color($main-color);
+	}
+	&:focus
+	{
+		& + .input-border
+	    {
+	    	@include scale(1);
+	    }
+	}
+}
+// lable style
+.input-border
+{
+	position: absolute;
+    top: 98%;
+    #{$right}: 0;
+    #{$left}: 0;
+    background: $main-color;
+    width: 100%;
+    height: 3px;
+    z-index: 9;
+    @include scale((0,1));
+   	@include transition(transform 0.5s);
+}
+/* end form style */

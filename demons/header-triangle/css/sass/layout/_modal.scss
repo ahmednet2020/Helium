@@ -1,0 +1,24 @@
+/*start modal style */
+.modal
+{
+	.modal-header
+	{
+		border-bottom: 2px solid $main-color;
+	}
+	.close
+	{
+		color:	$main-color;
+		opacity: 1;
+	}
+	.img-modal
+	{
+		width: 100%;
+    	height: 500px;
+		img
+		{
+			width:100%;
+			height:100%;
+		}
+	}
+}
+/*end modal style */

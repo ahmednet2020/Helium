@@ -1,0 +1,52 @@
+//import navbar style
+@import './_nav';
+/***************
+= start <header> style =
+*****************/
+header
+{
+	.shadow
+	{
+		will-change:display;
+		position: fixed;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    display:none;
+	    background-color: rgba($text-color,0.3);
+	    z-index: 8;
+	    &.show
+	    {
+	    	display:block;
+	    }
+	}
+	.slider
+	{
+		text-align: center;
+		background-color: $main-color2;
+		height:600px;
+		overflow:hidden;
+	}
+	.view-demon
+	{
+		width:50%;
+		height:200px;
+		@include boxshadow(0px 60px 20px -50px rgba($text-color,0.2));
+	}
+	.buy-now
+	{
+		text-transform: capitalize;
+		margin-top: 2rem;
+	    background-color: $main-color;
+	    padding: 1rem 2rem;
+	    font-size: 1rem;
+	    color:$white-color;
+	    display:block;
+	    line-height: 1;
+	    @include border-radius(50px);
+	}	
+}
+/***************
+= end <header> style =
+*****************/

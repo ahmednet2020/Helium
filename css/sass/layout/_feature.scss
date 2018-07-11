@@ -1,0 +1,25 @@
+.feature-list
+{
+	text-align: center;
+	background-color:$main-color2;
+	.feature-name
+	{
+		margin-bottom:0.5rem;
+	}
+	.icon-span,
+	.info-feature
+	{
+		-webkit-box-flex: 0;
+		@include perfix(flex,0 0 45%);
+	}
+	.icon-span
+	{
+		height: 250px;
+    	line-height: 250px;
+		font-size: 5rem;
+	}
+	.info-feature
+	{
+		text-align: left;
+	}
+}

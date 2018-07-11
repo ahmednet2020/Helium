@@ -1,0 +1,54 @@
+/*start our client say carousel style */
+.carousel-caption
+{
+	position: static;
+	color:$text-color;
+	b
+	{
+		font-size:2rem;
+		color:$main-color;
+	}
+	.client-text
+	{
+		padding: 0 1rem;
+		overflow: hidden;
+	}
+	.client-name
+	{
+		color:$main-color;
+		white-space: nowrap;
+		font-size:1.2rem;
+		&:hover,
+		&:focus
+		{
+			text-decoration: underline;
+		}
+	}
+
+}
+.carousel-indicators
+{
+	position: static;
+	li
+	{
+		cursor: pointer;
+		width:50px;
+		height:50px;
+		overflow: hidden;
+		@include border-radius(50%);
+		@include transition((transform 0.5s ease));
+		&.active
+		{
+			z-index: 5;
+			@include scale(1.5);
+			@include boxshadow(0 2px 2px (rgba($text-color,0.5)));
+		}
+	}
+	img
+	{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+}
+/*end our client say carousel style */

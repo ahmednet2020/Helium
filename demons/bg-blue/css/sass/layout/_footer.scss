@@ -1,0 +1,68 @@
+/*start footer style */
+footer
+{
+	.list-inline-item
+	{
+		&:not(:last-child)
+		{
+		    margin-#{$right}: .5rem;
+		    margin-#{$left}: .0;
+		}
+		a
+		{
+			width:70px;
+			display: inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			margin-top:1rem;
+			@include transition(width 0.5s);
+		}
+		&:hover
+		{
+			a
+			{
+				width:280px;
+			}
+		}
+	}
+	.social-icon,
+	.social-text
+	{
+	    font-size: 2rem;
+	    color:$white-color;
+	    display: inline-block;
+	    overflow: hidden;
+	    padding: 1rem;
+	}
+	.social-icon
+	{
+		width: 70px;
+	    margin-#{$right}: 10px;
+	}
+	.social-text
+	{
+		width:200px;
+	}
+	//color of social meida logo
+	.bg-fb
+	{
+ 		background-color:#3b5999;
+	}
+	.bg-tw
+	{
+ 		background-color:#55acee;
+	}
+	.bg-link
+	{
+ 		background-color:#0077B5;
+	}
+	.bg-in
+	{
+ 		background-color:#e4405f;
+	}
+	.bg-plus
+	{
+ 		background-color:#dd4b39;
+	}
+}
+/*end footer style */

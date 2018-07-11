@@ -1,0 +1,56 @@
+/*==========
+start mobile screen view style and parallax effect
+============*/
+%hidden
+{
+  @include translateX(105%);
+  @include transition(transform 0.4s linear);
+}
+.mobile-view
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: $right;
+  will-change: transform;
+	@include transition(transform 0.4s linear);
+	&.hidden
+	{
+		@extend %hidden;
+	}
+	@at-root .mobile-screen
+	{
+    position: relative;
+    z-index: 9;
+    display:inline-block;
+    vertical-align: middle;
+    width: 200px;
+    height: 300px;
+    border-color: $text-color;
+    border-width: 25px 10px 15px 10px;
+    border-style: solid;
+    border-radius: 10px;
+    overflow: hidden;
+    @include transition(transform 0.4s linear);
+    img
+    {
+      width:100%;
+      height:100%;
+    }
+    &.small
+    {
+    	width:180px;
+    	height:260px;
+   		border-color: $white-color;
+  		z-index: 1;
+  		@include translateX(35%);
+    	&.hidden
+   		{
+   			@extend %hidden;
+   		}
+    }
+  }
+}
+/*==========
+end mobile screen view style and parallax effect
+============*/

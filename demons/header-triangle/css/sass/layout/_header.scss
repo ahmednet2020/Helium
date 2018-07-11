@@ -1,0 +1,76 @@
+//import navbar style
+@import './_navbar';
+/***************
+= start <header> style =
+*****************/
+header
+{
+	overflow: hidden;
+	position: relative;
+    background-color:$main-color;
+    min-height: 600px;
+    background-size: cover;
+    &:after,
+    &:before
+    {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: 50%;
+        background: $main-color2;
+        width: 100%;
+        z-index: 0;
+    }
+    &:after
+    {
+        #{$left}: 0%;
+        @include skewY(45deg);
+        @include transform-origin($left);
+    }
+    &:before
+    {
+        #{$right}: 0%;
+        @include skewY(-45deg);
+        @include transform-origin($right);
+    }
+    .ovrlay-color
+    {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        #{$left}: 0;
+        #{$right}: 0;
+        z-index:9;
+    }
+    //header text style 
+    .header-text
+    {
+    	padding:3rem 0;
+    	color:$white-color;
+    }
+}
+//app button style
+.app-link
+{
+	width: 100%;
+    display: block;
+    height: 100px;
+    overflow: hidden;
+	background:url("./bg-img/app.png") 0/100% 200% no-repeat;
+    //background byttons app
+    &.app
+    {
+    	background-position: 0 0;
+    }
+    &.play
+    {
+    	background-position: 0 100%;
+    }
+}
+/***************
+= end <header> style =
+*****************/
+//import mobile screen view
+@import './_mobile-screen';

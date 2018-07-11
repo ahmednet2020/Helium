@@ -1,0 +1,16 @@
+/*start contact */
+.map-api
+{
+	height: 300px;
+    overflow: hidden;
+}
+.contact
+{
+	.form-control
+	{
+		color:$white-color;
+	    background-color: $main-color;
+	    @include placeholder-color($white-color);
+	}
+}
+/*end contact */

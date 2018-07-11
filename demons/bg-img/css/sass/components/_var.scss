@@ -1,0 +1,23 @@
+//color
+$main-color: #39b3f1;
+$main-color2:#e6f8fe;
+$text-color:#3b474b;
+$white-color:#fff;
+//var for left and right in css
+$left:left;
+$right:right;
+//change dir lang auto
+@if ($dir == rtl)
+{
+	$left:right;
+	$right:left;
+}
+//media var
+$maxxl: "all and (max-width: 1200px)";
+$maxlg: "all and (max-width: 992px)";
+$maxmd: "all and (max-width: 768px)";
+$xs: "all and (max-width: 575px)";
+$xl: "all and (min-width: 1200px)";
+$lg: "all and (min-width: 992px)";
+$md: "all and (min-width: 768px)";
+$sm: "all and (min-width: 576px)";

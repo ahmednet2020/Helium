@@ -1,0 +1,85 @@
+/***************
+= start <nav> style =
+*****************/
+nav
+{
+	background-color:$main-color;
+	padding:1rem 0;
+	color:$white-color;
+	.container
+	{
+		position: relative;
+	}
+	//style button tage 
+	.toggle-menu
+	{
+		color:$white-color;
+		font-size:2.5rem;
+		width:60px;
+		display: inline-block;
+		position: relative;
+		z-index:10;
+		.fa-times
+		{
+   		 	display:none;
+		}
+		.fa-bars
+		{
+			display:block;
+		}
+		&.close
+		{
+			@include boxshadow((-10px -10px 5px -5px rgba($text-color,0.5)));
+			background-color:$white-color;
+			color:$main-color;
+			.fa-times
+			{
+				display:block;
+			}
+			.fa-bars
+			{
+	   		 	display:none;
+			}
+		}
+	}
+	//style logo class
+	.logo
+	{
+		float:$right;
+		font-size:1rem;
+		line-height: 1.8;
+		overflow: hidden;
+	    display: block;
+	    img
+	    {
+	    	height:35px;
+	    }
+		&:after
+		{
+			content:"";
+			display:block;
+			clear:both;
+		}
+	}
+	//style manu list
+	.nav-list
+	{
+		will-change:transform;
+		position: absolute;
+		z-index:9;
+		top: 50%;
+    	left: 5%;
+		padding:1rem;
+		background-color:$main-color;
+		@include boxshadow((15px 16px 10px -5px rgba($text-color,0.3)));
+	}
+	.nav-item
+	{
+		font-size: 1.5rem;
+	    text-transform: capitalize;
+	    padding: 0.5rem 0;
+	}
+}
+/***************
+= end nav style =
+*****************/
